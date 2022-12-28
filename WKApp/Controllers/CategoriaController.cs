@@ -8,14 +8,15 @@ namespace WKApp.Controllers
     public class CategoriaController : Controller
     {
 
-        private readonly ICategoria _ICategoria;
+        private ICategoria _ICategoria;
+
         public CategoriaController(ICategoria ICategoria)
         {
             _ICategoria = ICategoria;
         }
 
         // GET: CategoriaController
-        public ActionResult Index(ICategoria _ICategoria)
+        public ActionResult Index()
         {
             return View(_ICategoria.GetCategorias());
         }

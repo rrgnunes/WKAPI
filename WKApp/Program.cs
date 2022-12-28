@@ -1,3 +1,4 @@
+using WKApp.Controllers;
 using WKApp.Interfaces;
 using WKApp.Repositorios;
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IProduto, repoProduto>();
 builder.Services.AddSingleton<ICategoria, repoCategoria>();
+builder.Services.AddScoped<ICategoria, repoCategoria>();
 
 var app = builder.Build();
 

@@ -7,7 +7,7 @@ namespace WKApp.Controllers
 {
     public class ProdutosController : Controller
     {
-        private readonly IProduto _IProduto;
+        private IProduto _IProduto;
         public ProdutosController(IProduto IProduto)
         {
             _IProduto = IProduto;

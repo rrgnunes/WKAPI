@@ -5,6 +5,8 @@ namespace WKApp.Interfaces
 {
     public interface ICategoria
     {
+
+
         List<Categoria> GetCategorias();
         Categoria GetCategoria(int id);
         Categoria PutCategoria(int id, Categoria categoria);
